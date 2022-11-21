@@ -63,7 +63,7 @@ public class BlogClientWithImageApplication implements CommandLineRunner{
 				+ "Making kids love this subject is a challenge, especially for parents. "
 				+ "It takes a lot of brainpower to master Maths and this can be tough for kids. "
 				+ "Some students may find Maths hard to learn. ");
-		blogRepo.save(b);
+		
 		
 		Comment comment=new Comment();
 		comment.setBlog(b);
@@ -75,6 +75,7 @@ public class BlogClientWithImageApplication implements CommandLineRunner{
 	
 		b.setComments(Arrays.asList(comment));
 		
+	
 		blogRepo.save(b);
 		
 		

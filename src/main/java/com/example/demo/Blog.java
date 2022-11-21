@@ -27,7 +27,7 @@ public class Blog {
 	@OneToOne
 	private User createdBy;	
 	private Date date;
-	@OneToMany
+	@OneToMany (mappedBy="blog")
 	private List<Comment> comments;	
 	private int noOfLikes;
 	
