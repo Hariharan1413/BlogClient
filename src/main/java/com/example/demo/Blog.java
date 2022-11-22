@@ -25,6 +25,7 @@ public class Blog {
 	private String title;
 	@OneToOne
 	private Category category;
+	
 	@Lob 
 	@Column(name="CONTENT", length=2000)
 	private String content;
