@@ -2,6 +2,7 @@ package com.example.demo;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
@@ -21,11 +22,11 @@ public class User {
 	private String password;
 	private String role;
 	private String name;
-	@OneToMany
+	@OneToMany(cascade=CascadeType.ALL)
 	private List<Blog> blogs;
 	private String email;
 	
-	@OneToOne
+	@OneToOne(cascade=CascadeType.ALL)
 	private FileDB profilePic;
 	
 	@ManyToMany

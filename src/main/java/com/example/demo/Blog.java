@@ -3,6 +3,7 @@ package com.example.demo;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,8 +19,7 @@ import lombok.Data;
 @Data
 public class Blog {
 	
-	@Id	
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Id	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	
 	private String title;
@@ -29,7 +29,7 @@ public class Blog {
 	@Lob 
 	@Column(name="CONTENT", length=2000)
 	private String content;
-	@OneToOne
+	@OneToOne	(cascade=CascadeType.ALL)
 	private User createdBy;	
 	private Date date;
 	@OneToMany (mappedBy="blog")
