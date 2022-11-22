@@ -59,11 +59,11 @@ public class BlogClientWithImageApplication implements CommandLineRunner{
 		b.setDate(new Date());
 		
 		b.setTitle("Maths");
-		b.setDescription("Maths is a subject which is not only applicable in our academics but also in real life. "
+		b.setContent("Maths is a subject which is not only applicable in our academics but also in real life. "
 				+ "Making kids love this subject is a challenge, especially for parents. "
 				+ "It takes a lot of brainpower to master Maths and this can be tough for kids. "
 				+ "Some students may find Maths hard to learn. ");
-		
+		blogRepo.save(b);
 		
 		Comment comment=new Comment();
 		comment.setBlog(b);
