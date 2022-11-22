@@ -19,6 +19,7 @@ public class User {
 	@Id
 	private String userId;
 	private String password;
+	private String role;
 	private String name;
 	@OneToMany
 	private List<Blog> blogs;
